@@ -156,6 +156,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+config/secrets.py
 
 # Spyder project settings
 .spyderproject
