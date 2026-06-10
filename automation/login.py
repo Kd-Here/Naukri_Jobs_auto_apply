@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
+import time
 from config.secrets import (
     NAUKRI_EMAIL,
     NAUKRI_PASSWORD
@@ -42,9 +42,11 @@ def login_naukri():
         By.XPATH,
         "//button[@type='submit']"
     )
-
+    time.sleep(1)
     submit_btn.click()
 
     print("Logged in")
 
-    return driver
+    return driver,wait
+
+
